@@ -73,7 +73,6 @@ import firebase from 'firebase/compat/app';
                     />
                 ))} 
 
-                {/* <Post name="Madhuresh" description="This is the test" message="This is working" /> */}
             </div>
             
         )
