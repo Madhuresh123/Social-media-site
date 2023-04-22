@@ -13,7 +13,8 @@ import firebase from 'firebase/compat/app';
 
             useEffect( ()  =>  {
 
-                db.collection("posts").onSnapshot( (snapshot) => 
+                db.collection("posts").orderBy("timestamp", "desc")
+                .onSnapshot( (snapshot) => 
             
                     setPosts(
                 snapshot.docs.map((doc) => ({
@@ -35,6 +36,8 @@ import firebase from 'firebase/compat/app';
                     photoURl: '',
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
                 })
+
+                setInput(""); 
             }
 
         return (
@@ -60,11 +63,17 @@ import firebase from 'firebase/compat/app';
                     </div>
                 </div>
 
-             {posts.map((post) => (
-                    <Post/>
+             {posts.map(({ id, data: { name, description, message, photoURl}}) => (
+                    <Post 
+                    key = {id}
+                    name = {name}
+                    description={ description}
+                    message={ message}
+                    photoUrl={ photoURl}
+                    />
                 ))} 
 
-                <Post name="Madhuresh" description="This is the test" message="This is working" />
+                {/* <Post name="Madhuresh" description="This is the test" message="This is working" /> */}
             </div>
             
         )
