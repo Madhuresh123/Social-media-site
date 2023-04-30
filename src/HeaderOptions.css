@@ -30,6 +30,7 @@ img{
     margin-top: 20px;
     color: grey;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .options:hover {

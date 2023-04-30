@@ -1,6 +1,6 @@
 .sidebar{
-    position: sticky;
-    top:80px;
+    margin-top: 40px;
+    margin-left: 200px;
     flex:0.2;
     border-radius: 10px;
     text-align: center;

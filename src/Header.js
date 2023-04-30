@@ -1,8 +1,21 @@
 import React from 'react'
 import "./Header.css";
 import HeaderOptions from "./HeaderOptions.js";
+// import { useDispatch } from 'react-redux';
+// import { logout } from './features/userSlice';
+// import { auth } from './firebase';
+
+
+
 
 function Header() {
+  
+  // const dispatch = useDispatch();
+  // const logoutOfApp = () => {
+  //     dispatch(logout())
+  //     auth.signOut();
+  // };
+
   return (
     <div className='header'>
 
@@ -34,5 +47,6 @@ function Header() {
     </div>
   )
 }
+
 
 export default Header
