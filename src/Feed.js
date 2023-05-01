@@ -58,7 +58,7 @@ import firebase from 'firebase/compat/app';
 
                     <div className='feed_inputOptions'>
 
-                    <InputOptions/>
+                   <InputOptions/>
 
                     </div>
                 </div>
